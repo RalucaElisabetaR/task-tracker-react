@@ -7,10 +7,12 @@ const AddTask = ({ onAdd }) => {
 
     const onSubmit = (e) => {
         e.preventDefault()
+
         if (!text) {
-            alert('Please add task')
+            alert('Please add a task')
             return
         }
+
         onAdd({ text, day, reminder })
 
         setText('')
@@ -47,6 +49,7 @@ const AddTask = ({ onAdd }) => {
                     onChange={(e) => setReminder(e.currentTarget.checked)}
                 />
             </div>
+
             <input type="submit" value="Save Task" className="btn btn-block" />
         </form>
     )
